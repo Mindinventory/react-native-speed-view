@@ -36,5 +36,6 @@ To Run: yan ios
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
+react-native-speed-view  is [MIT-licensed](https://github.com/Mindinventory/react-native-speed-view/blob/main/LICENSE)..
 
 MIT
