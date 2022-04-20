@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/TusharSanchaniya-mi/react-native-speed-view",
+  "repository": "https://github.com/Mindinventory/react-native-speed-view",
   "author": "Tushar Sanchaniya <tushar.sanchaniya@mindinventory.com> (https://github.com/TusharSanchaniya-mi)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TusharSanchaniya-mi/react-native-speed-view/issues"
+    "url": "https://github.com/Mindinventory/react-native-speed-view/issues"
   },
-  "homepage": "https://github.com/TusharSanchaniya-mi/react-native-speed-view#readme",
+  "homepage": "https://github.com/Mindinventory/react-native-speed-view#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

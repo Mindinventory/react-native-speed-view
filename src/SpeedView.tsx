@@ -51,7 +51,7 @@ const SpeedView: React.FC<SpeedViewProps> = ({
 
   useEffect(() => {
     repeateAnimtion();
-  }, []);
+  }, [percentage]);
 
   /* 
     Prepare and start animatino of the glowing progress
@@ -65,12 +65,17 @@ const SpeedView: React.FC<SpeedViewProps> = ({
       easing: Easing.out(Easing.ease),
     }).start();
   };
-  
+
   /* 
     Set repreated animation for several times to play. play in Time Interval and later destroy repetation
     timer to remove and set percetnage from props 
   */
   const repeateAnimtion = () => {
+    if (percentage == 0) {
+      animation(0);
+      setCerclePercentage(0);
+      return;
+    }
     const timeInterval = setInterval(() => {
       let newPercentage = getRandomNumberFromRange(
         getRandomNumberFromRange(20, 90),
@@ -155,8 +160,8 @@ const SpeedView: React.FC<SpeedViewProps> = ({
             gradientUnits="userSpaceOnUse"
           >
             <>
-            <Stop offset="0" stopColor="#F9F9F9" stopOpacity={0.5} />
-            <Stop offset="1" stopColor="#01F3A6" stopOpacity={1.0} />
+              <Stop offset="0" stopColor="#F9F9F9" stopOpacity={0.5} />
+              <Stop offset="1" stopColor="#01F3A6" stopOpacity={1.0} />
             </>
           </RadialGradient>
         </Defs>
@@ -179,8 +184,8 @@ const SpeedView: React.FC<SpeedViewProps> = ({
         />
         {showProgress && (
           <Text
-            x={'47%'}
-            y={'51%'}
+            x={width / 2.15}
+            y={height / 1.97}
             fontSize={25}
             fontWeight="800"
             fill="white"
@@ -210,10 +215,10 @@ const SpeedView: React.FC<SpeedViewProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     backgroundColor: '#444B6F',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   containerSVG: {
     position: 'absolute',

@@ -9,6 +9,7 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "@react-native-community/slider": "^4.2.1",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^2.3.2",
