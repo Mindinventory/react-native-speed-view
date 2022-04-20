@@ -2,9 +2,11 @@
 
 It will show speedometer.
 
-Gif
+Here's projection of this component in GIF format.
 
-![Simulator Screen Recording - iPhone 11 - 2022-04-20 at 10 07 21](https://user-images.githubusercontent.com/82019401/164162000-4d5a9b69-1a68-48af-8301-f9e8c41eade9.gif)
+![Simulator Screen Recording - iPhone 11 - 2022-04-20 at 12 59 09](https://user-images.githubusercontent.com/82019401/164174514-2369be99-a00a-4171-a47d-95b997388bbe.gif)
+
+
 
 
 # Props
