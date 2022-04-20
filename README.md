@@ -31,6 +31,10 @@ Pod Installation: cd example && cd ios && pod install && cd ..
 To Run: yan ios
 ```
 
+## Dependencies
+
+- `react-native-svg`
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
