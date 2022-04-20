@@ -2,8 +2,12 @@
 
 It will show speedometer.
 
+Gif
 
-# Props to use
+![Simulator Screen Recording - iPhone 11 - 2022-04-20 at 10 07 21](https://user-images.githubusercontent.com/82019401/164162000-4d5a9b69-1a68-48af-8301-f9e8c41eade9.gif)
+
+
+# Props
 | Parameter | Type | Description
 | ------    | ------ | ------ |
 | percentage | _number_ | Default value `85` |
