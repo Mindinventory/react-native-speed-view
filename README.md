@@ -9,14 +9,14 @@ Here's projection of this component in GIF format.
 
 
 
-# Props
-| Parameter | Type | Description
-| ------    | ------ | ------ |
-| percentage | _number_ | Default value `85` |
-| maxPercentage | _number (Optional)_ | Default value `100` |
-| gradientColorStart | _GradientColor (Optional)_ | GradientColor interface has two parameter `color` & `Opacity`|
-| gradientColorEnd | _GradientColor (Optional)_ | GradientColor interface has two parameter `color` & `Opacity`|
-| showProgress | _boolean (Optional)_ | Default value `true` |
+# Component props
+| prop | value  | required/optional | Description
+| ------    | ------ | ------ | ------ |
+| percentage | _number_ | required | Default value `85` |
+| maxPercentage | _number_ | optional | Default value `100` |
+| gradientColorStart | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
+| gradientColorEnd | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
+| showProgress | _boolean_ | optional | Default value `true` |
 
 
 ## To Run example
