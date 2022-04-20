@@ -19,7 +19,7 @@ Here's projection of this component in GIF format.
 | showProgress | _boolean (Optional)_ | Default value `true` |
 
 
-## Installation
+## To Run example
 
 ```sh
 Goto example directory and install all packages that requires.
