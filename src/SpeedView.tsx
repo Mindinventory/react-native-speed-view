@@ -21,7 +21,7 @@ interface SpeedViewProps {
   gradientColorStart?: GradientColor;
   gradientColorEnd?: GradientColor;
   showProgress?: boolean;
-  bounceProgress?: boolean;
+  enableBounceEffect?: boolean;
   progressFormatSign?: string;
 }
 
@@ -31,7 +31,7 @@ const SpeedView: React.FC<SpeedViewProps> = ({
   gradientColorStart = { color: '#00D9F5', opacity: 1.0 },
   gradientColorEnd = { color: '#00F5A0', opacity: 1.0 },
   showProgress = true,
-  bounceProgress = true,
+  enableBounceEffect = true,
   progressFormatSign = undefined,
 }) => {
   /* Circle design layout and circular radius */
@@ -82,7 +82,7 @@ const SpeedView: React.FC<SpeedViewProps> = ({
     //   setCerclePercentage(0);
     //   return;
     // }
-    if (bounceProgress) {
+    if (enableBounceEffect) {
       clearInterval(timeInterval);
       timeInterval = setInterval(() => {
         let newPercentage = getRandomNumberFromRange(
