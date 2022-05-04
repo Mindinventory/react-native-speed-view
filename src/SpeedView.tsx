@@ -21,6 +21,8 @@ interface SpeedViewProps {
   gradientColorStart?: GradientColor;
   gradientColorEnd?: GradientColor;
   showProgress?: boolean;
+  bounceProgress?: boolean;
+  progressFormatSign?: string;
 }
 
 const SpeedView: React.FC<SpeedViewProps> = ({
@@ -29,6 +31,8 @@ const SpeedView: React.FC<SpeedViewProps> = ({
   gradientColorStart = { color: '#00D9F5', opacity: 1.0 },
   gradientColorEnd = { color: '#00F5A0', opacity: 1.0 },
   showProgress = true,
+  bounceProgress = true,
+  progressFormatSign = undefined,
 }) => {
   /* Circle design layout and circular radius */
   const BACKGROUND_STROKE_COLOR = '#303858';
@@ -45,7 +49,7 @@ const SpeedView: React.FC<SpeedViewProps> = ({
   const animatedValue = useRef(new Animated.Value(0)).current;
   const [circlePercentage, setCerclePercentage] = useState<number>(0);
   const iTimeInterval: number = 600;
-  const iTimeStoper: number = 2500;
+  const iTimeStoper: number = 2200;
   const duration: number = 600;
   const delay: number = 0;
 
@@ -70,27 +74,40 @@ const SpeedView: React.FC<SpeedViewProps> = ({
     Set repreated animation for several times to play. play in Time Interval and later destroy repetation
     timer to remove and set percetnage from props 
   */
+  let timeInterval: NodeJS.Timer;
   const repeateAnimtion = () => {
-    if (percentage == 0) {
-      animation(0);
-      setCerclePercentage(0);
-      return;
-    }
-    const timeInterval = setInterval(() => {
-      let newPercentage = getRandomNumberFromRange(
-        getRandomNumberFromRange(20, 90),
-        percentage
-      );
-      animation(newPercentage);
-      setCerclePercentage(Math.round(newPercentage));
-      startAnimation();
-    }, iTimeInterval);
-
-    setTimeout(() => {
+    // if (percentage == 0) {
+    //   animation(0).stop();
+    //   startAnimation();
+    //   setCerclePercentage(0);
+    //   return;
+    // }
+    if (bounceProgress) {
       clearInterval(timeInterval);
-      animation(percentage);
-      startAnimation();
-    }, iTimeStoper);
+      timeInterval = setInterval(() => {
+        let newPercentage = getRandomNumberFromRange(
+          getRandomNumberFromRange(20, 90),
+          percentage
+        );
+        animation(newPercentage);
+        setCerclePercentage(Math.round(newPercentage));
+        startAnimation();
+      }, iTimeInterval);
+
+      setTimeout(() => {
+        clearInterval(timeInterval);
+        animation(percentage);
+        startAnimation();
+      }, iTimeStoper);
+    } else {
+      const maxPer = (100 * percentage) / maxPercentage;
+      let strokeDashoffset =
+        circleCircumReference - (circleCircumReference * maxPer) / 100;
+      setCerclePercentage(Math.round(maxPer));
+      circleRef?.current?.setNativeProps({
+        strokeDashoffset,
+      });
+    }
   };
 
   const startAnimation = () => {
@@ -183,16 +200,30 @@ const SpeedView: React.FC<SpeedViewProps> = ({
           transform={`rotate(-90, ${width / 2}, ${height / 2})`}
         />
         {showProgress && (
-          <Text
-            x={width / 2.15}
-            y={height / 1.97}
-            fontSize={25}
-            fontWeight="800"
-            fill="white"
-            textAnchor={'middle'}
-          >
-            {circlePercentage} %
-          </Text>
+          <>
+            <Text
+              x={width / (progressFormatSign != undefined ? 2 : 2.15)}
+              y={height / (progressFormatSign != undefined ? 2.05 : 1.97)}
+              fontSize={25}
+              fontWeight="800"
+              fill="white"
+              textAnchor={'middle'}
+            >
+              {circlePercentage} {progressFormatSign == undefined && '%'}
+            </Text>
+            {progressFormatSign != undefined && (
+              <Text
+                x={width / 2}
+                y={height / 1.93}
+                fontSize={20}
+                fontWeight="800"
+                fill="white"
+                textAnchor={'middle'}
+              >
+                {progressFormatSign}
+              </Text>
+            )}
+          </>
         )}
         <Defs>
           <LinearGradient id="path" x1={'70%'} y1={'20%'} x2={'40%'} y2={'10%'}>
@@ -232,13 +263,13 @@ const styles = StyleSheet.create({
     elevation: 9,
   },
   grdientSvg: {
-    shadowColor: '#00D9F5',
+    shadowColor: '#00F5A0',
     shadowOffset: {
       width: 0,
       height: 0,
     },
     shadowOpacity: 1,
-    shadowRadius: 30,
+    shadowRadius: 25,
     elevation: 9,
   },
 });
