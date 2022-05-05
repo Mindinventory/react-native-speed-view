@@ -76,14 +76,9 @@ const SpeedView: React.FC<SpeedViewProps> = ({
   */
   let timeInterval: NodeJS.Timer;
   const repeateAnimtion = () => {
-    // if (percentage == 0) {
-    //   animation(0).stop();
-    //   startAnimation();
-    //   setCerclePercentage(0);
-    //   return;
-    // }
+    // if (enableBounceEffect) {
+    clearInterval(timeInterval);
     if (enableBounceEffect) {
-      clearInterval(timeInterval);
       timeInterval = setInterval(() => {
         let newPercentage = getRandomNumberFromRange(
           getRandomNumberFromRange(20, 90),
@@ -93,21 +88,25 @@ const SpeedView: React.FC<SpeedViewProps> = ({
         setCerclePercentage(Math.round(newPercentage));
         startAnimation();
       }, iTimeInterval);
+    }
 
-      setTimeout(() => {
+    setTimeout(
+      () => {
         clearInterval(timeInterval);
         animation(percentage);
         startAnimation();
-      }, iTimeStoper);
-    } else {
-      const maxPer = (100 * percentage) / maxPercentage;
-      let strokeDashoffset =
-        circleCircumReference - (circleCircumReference * maxPer) / 100;
-      setCerclePercentage(Math.round(maxPer));
-      circleRef?.current?.setNativeProps({
-        strokeDashoffset,
-      });
-    }
+      },
+      enableBounceEffect ? iTimeStoper : iTimeInterval
+    );
+    // } else {
+    //   const maxPer = (100 * percentage) / maxPercentage;
+    //   let strokeDashoffset =
+    //     circleCircumReference - (circleCircumReference * maxPer) / 100;
+    //   setCerclePercentage(Math.round(maxPer));
+    //   circleRef?.current?.setNativeProps({
+    //     strokeDashoffset,
+    //   });
+    // }
   };
 
   const startAnimation = () => {

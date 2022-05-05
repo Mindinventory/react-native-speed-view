@@ -20,7 +20,7 @@ const App = () => {
         />
         <Text style={styles.progressStyle}>{progressValue}%</Text>
       </View>
-      <SpeedView percentage={progressValue} />
+      <SpeedView percentage={progressValue} enableBounceEffect={false} />
     </SafeAreaView>
   );
 };
@@ -29,6 +29,7 @@ export default App;
 
 const styles = StyleSheet.create({
   safeAreaStyle: {
+    // backgroundColor: '#444B6F',
     backgroundColor: '#444B6F',
   },
   sliderContainerStyle: {
