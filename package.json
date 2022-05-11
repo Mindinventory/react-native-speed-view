@@ -1,5 +1,5 @@
 {
-  "name": "react-native-speed-view",
+  "name": "@mindinventory/react-native-speed-view",
   "version": "0.1.0",
   "description": "It will show speedometer.",
   "main": "lib/commonjs/index",
