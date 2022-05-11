@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { SafeAreaView, View } from 'react-native';
 import Slider from '@react-native-community/slider';
-import SpeedView from 'react-native-speed-view';
 import { StyleSheet, Text } from 'react-native';
+import SpeedView from '@mindinventory/react-native-speed-view';
 
 const App = () => {
   const initialvalue = 35;
   const [progressValue, setProgressValue] = useState<number>(initialvalue);
-  const [circleSize, setCircleSize] = useState<number>(150);
+  const [circleSize, setCircleSize] = useState<number>(350);
   
   return (
     <SafeAreaView style={styles.safeAreaStyle}>
@@ -40,7 +40,7 @@ const App = () => {
             style={styles.sliderStyle}
             maximumValue={450}
             minimumValue={150}
-            value={150}
+            value={circleSize}
             maximumTrackTintColor="lightgray"
             onSlidingComplete={(val) => {
               setCircleSize(Math.round(val));
@@ -54,8 +54,6 @@ const App = () => {
         percentage={progressValue}
         size={circleSize}
         showProgress={true}
-        gradientColorStart={{ color: '#de6262', opacity: '0.6' }}
-        gradientColorEnd={{ color: '#ffb88c', opacity: '0.6' }}
       />
     </SafeAreaView>
   );

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-speed-view": ["./src/index"]
+      "@mindinventory/react-native-speed-view": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
