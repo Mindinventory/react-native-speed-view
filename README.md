@@ -1,6 +1,10 @@
-# react-native-speed-view
+# react-native-speed-progress-view
+![@mindinventory/React Native SpeedProgressView Version](https://flat.badgen.net/npm/v/@mindinventory/react-native-speed-view)
+![@mindinventory/React Native SpeedProgressView Top Language](https://img.shields.io/github/languages/top/Mindinventory/react-native-speed-view)
+![@mindinventory/React Native SpeedProgressView TypeScript](https://badgen.net/npm/types/tslib)
+![@mindinventory/React Native SpeedProgressView License](https://img.shields.io/github/license/Mindinventory/react-native-speed-view)
 
-It will show speedometer.
+speed progress view, using this component we can show the speed. you can also use it to show progress of any task with effective customized animated view.
 
 Here's projection of this component in GIF format.
 
@@ -14,13 +18,21 @@ Here's projection of this component in GIF format.
 | ------    | ------ | ------ | ------ |
 | percentage | _number_ | required | Default value `85` |
 | maxPercentage | _number_ | optional | Default value `100` |
+| showProgress | _boolean_ | optional | Default value `true` |
+| size | _number_ | required | To define component size |
 | gradientColorStart | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
 | gradientColorEnd | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
-| showProgress | _boolean_ | optional | Default value `true` |
 | enableBounceEffect | _boolean_ | optional | Default value `true` |
 | progressFormatSign | _string_ | optional | Allow user to set formate of progress text formate to change. |
 
-## To Run example
+
+## Installation
+
+```
+yarn add @mindinventory/react-native-speed-view
+```
+
+## To run example
 
 ```sh
 Goto example directory and install all packages that requires.
@@ -40,7 +52,15 @@ To Run: yan ios
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-## License
-react-native-speed-view  is [MIT-licensed](https://github.com/Mindinventory/react-native-speed-view/blob/main/LICENSE)..
+# LICENSE!
 
-MIT
+react-native-speed-progress-view  is [MIT-licensed](https://github.com/Mindinventory/react-native-speed-view/blob/main/LICENSE).
+
+# Let us know!
+
+If you use our open-source libraries in your project, please make sure to credit us and Give a star to www.mindinventory.com
+
+<p><h4>Please feel free to use this component and Let us know if you are interested to building Apps or Designing Products.</h4>
+<a href="https://www.mindinventory.com/contact-us.php?utm_source=gthb&utm_medium=repo&utm_campaign=react-native-speed-view" target="__blank">
+<img src="https://github.com/Sammindinventory/MindInventory/blob/main/hirebutton.png" width="203" height="43"  alt="app development">
+</a>
