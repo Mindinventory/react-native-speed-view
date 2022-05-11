@@ -17,7 +17,8 @@ Here's projection of this component in GIF format.
 | gradientColorStart | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
 | gradientColorEnd | _GradientColor_ | optional | GradientColor interface has two parameter `color` & `Opacity`|
 | showProgress | _boolean_ | optional | Default value `true` |
-
+| enableBounceEffect | _boolean_ | optional | Default value `true` |
+| progressFormatSign | _string_ | optional | Allow user to set formate of progress text formate to change. |
 
 ## To Run example
 
