@@ -4,16 +4,13 @@
 ![@mindinventory/React Native SpeedProgressView TypeScript](https://badgen.net/npm/types/tslib)
 ![@mindinventory/React Native SpeedProgressView License](https://img.shields.io/github/license/Mindinventory/react-native-speed-view)
 
-speed progress view, using this component we can show the speed. you can also use it to show progress of any task with effective customized animated view.
-
-Here's projection of this component in GIF format.
+SpeedView, using this component we can show the speed progress with effective UI. you can also use it to show progress of any task with effective animated view.
 
 ![Simulator Screen Recording - iPhone 11 - 2022-04-20 at 12 59 09](https://user-images.githubusercontent.com/82019401/164174514-2369be99-a00a-4171-a47d-95b997388bbe.gif)
 
 
 
-
-# Component props
+## Component props
 | prop | value  | required/optional | Description
 | ------    | ------ | ------ | ------ |
 | percentage | _number_ | required | Default value `85` |
@@ -48,13 +45,20 @@ To Run: yan ios
 
 - `react-native-svg`
 
+
+## Dribbble
+https://dribbble.com/shots/16912117-Automotive-App
+
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-# LICENSE!
+
+## LICENSE!
 
 react-native-speed-progress-view  is [MIT-licensed](https://github.com/Mindinventory/react-native-speed-view/blob/main/LICENSE).
+
 
 # Let us know!
 
