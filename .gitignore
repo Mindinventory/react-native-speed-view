@@ -72,3 +72,6 @@ lib/
 # CocoaPods
 /example/ios/Pods/
 /example/ios/Podfile.lock
+yarn.lock
+/example/yarn.lock
+/example/package-lock.json
