@@ -1,6 +1,6 @@
 {
   "name": "@mindinventory/react-native-speed-view",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "It will show speedometer.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,6 +36,7 @@
     "ios",
     "android"
   ],
+  "private": false,
   "repository": "https://github.com/Mindinventory/react-native-speed-view",
   "author": "Tushar Sanchaniya <tushar.sanchaniya@mindinventory.com> (https://github.com/TusharSanchaniya-mi)",
   "license": "MIT",

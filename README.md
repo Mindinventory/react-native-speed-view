@@ -1,4 +1,4 @@
-# react-native-speed-progress-view
+## react-native-speed-progress-view
 ![@mindinventory/React Native SpeedProgressView Version](https://flat.badgen.net/npm/v/@mindinventory/react-native-speed-view)
 ![@mindinventory/React Native SpeedProgressView Top Language](https://img.shields.io/github/languages/top/Mindinventory/react-native-speed-view)
 ![@mindinventory/React Native SpeedProgressView TypeScript](https://badgen.net/npm/types/tslib)
@@ -27,6 +27,16 @@ SpeedView, using this component we can show the speed progress with effective UI
 
 ```
 yarn add @mindinventory/react-native-speed-view
+```
+
+## Usage
+
+```
+<SpeedView
+  percentage={75}
+  size={250}
+  showProgress={true}
+/>
 ```
 
 ## To run example
