@@ -29,6 +29,8 @@ SpeedView, using this component we can show the speed progress with effective UI
 yarn add @mindinventory/react-native-speed-view
 ```
 
+## Usage
+
 ```
 <SpeedView
   percentage={75}
