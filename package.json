@@ -36,6 +36,7 @@
     "ios",
     "android"
   ],
+  "private": false,
   "repository": "https://github.com/Mindinventory/react-native-speed-view",
   "author": "Tushar Sanchaniya <tushar.sanchaniya@mindinventory.com> (https://github.com/TusharSanchaniya-mi)",
   "license": "MIT",

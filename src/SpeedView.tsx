@@ -1,13 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Animated, Easing, Dimensions } from 'react-native';
-import Svg, {
-  Circle,
-  Defs,
-  LinearGradient,
-  RadialGradient,
-  Stop,
-  Text as SvgText,
-} from 'react-native-svg';
+import { Animated, Easing, Dimensions, View, Text } from 'react-native';
+import Svg, { Circle, Defs, LinearGradient, Stop } from 'react-native-svg';
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
@@ -132,7 +125,7 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
         cx={center}
         cy={center}
         r={radius}
-        stroke={'url(#outerpath)'}
+        stroke={'black'}
         strokeOpacity={1}
         strokeWidth={size / 20}
         strokeDasharray={2}
@@ -155,37 +148,28 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
       />
 
       {showProgress && (
-        <SvgText
-          x={center - 10}
-          y={center + 5}
-          fontSize={size / 15}
-          letterSpacing={10}
-          fontWeight="800"
-          fill="white"
-          textAnchor={'middle'}
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: radius / 2.5,
+            width: radius / 2.5,
+            marginTop: center - radius / 4.5,
+            marginLeft: center - radius / 5.5,
+          }}
         >
-          {circlePercentage}
-          {progressFormatSign == undefined ? '%' : progressFormatSign}
-        </SvgText>
+          <Text
+            style={{
+              fontSize: size / 15,
+              fontWeight: '700',
+              color: 'white',
+            }}
+          >
+            {circlePercentage}
+            {progressFormatSign == undefined ? '%' : progressFormatSign}
+          </Text>
+        </View>
       )}
-
-      <Defs>
-        <RadialGradient
-          id="outerpath"
-          cx="300"
-          cy="550"
-          rx="450"
-          ry="450"
-          fx="200"
-          fy="450"
-          gradientUnits="userSpaceOnUse"
-        >
-          <>
-            <Stop offset="0" stopColor="#F9F9F9" stopOpacity={0.5} />
-            <Stop offset="1" stopColor="#01F3A6" stopOpacity={1.0} />
-          </>
-        </RadialGradient>
-      </Defs>
 
       <AnimatedCircle
         ref={circleRef}
