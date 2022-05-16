@@ -1,6 +1,6 @@
 {
   "name": "@mindinventory/react-native-speed-view",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "It will show speedometer.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,7 +34,15 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "animation",
+    "progress-view",
+    "react-native-animation",
+    "svg",
+    "speedview",
+    "speed-meter",
+    "speed-progress",
+    "react-native-speed-view"
   ],
   "private": false,
   "repository": "https://github.com/Mindinventory/react-native-speed-view",

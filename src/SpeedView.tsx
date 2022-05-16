@@ -164,10 +164,12 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
               fontSize: size / 15,
               fontWeight: '700',
               color: 'white',
+              textAlign: 'center',
             }}
           >
             {circlePercentage}
-            {progressFormatSign == undefined ? '%' : progressFormatSign}
+            {'\n'}
+            <Text style={{fontSize: size / 22, fontWeight:'600'}}>{progressFormatSign == undefined ? 'km/h' : progressFormatSign}</Text>
           </Text>
         </View>
       )}
