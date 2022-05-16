@@ -1,0 +1,16 @@
+name: "publish react-native-speed-view"
+
+on:
+    release:
+        branches: 
+            - master
+
+jobs:
+    release:
+        name: react-native-speed-view
+        runs-on: macOS Monterey
+        steps:
+            - name: 🚀 publish
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
