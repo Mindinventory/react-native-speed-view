@@ -3,7 +3,7 @@ name: "publish react-native-speed-view"
 on:
     release:
         branches: 
-            - master
+            - main
 
 jobs:
     release:
