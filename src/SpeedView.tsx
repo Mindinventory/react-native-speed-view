@@ -55,7 +55,7 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
     repeateAnimtion();
   }, [percentage]);
 
-  /* 
+  /*
     Prepare and start animatino of the glowing progress
   */
   const animation = (toValue: number) => {
@@ -68,9 +68,9 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
     }).start();
   };
 
-  /* 
+  /*
     Set repreated animation for several times to play. play in Time Interval and later destroy repetation
-    timer to remove and set percetnage from props 
+    timer to remove and set percetnage from props
   */
   let timeInterval: NodeJS.Timer;
   const repeateAnimtion = () => {
@@ -112,6 +112,7 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  // @ts-ignore
   return (
     <Svg width={size} height={size} style={{ alignSelf: 'center' }}>
       <Circle
@@ -185,6 +186,7 @@ const SpeedView: React.FC<SpeedCircleViewProps> = ({
       />
 
       <Defs>
+        {/* @ts-ignore:-*/}
         <LinearGradient id="path" x1={'70%'} y1={'20%'} x2={'40%'} y2={'10%'}>
           <Stop
             offset="0"

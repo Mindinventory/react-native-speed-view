@@ -2,7 +2,7 @@
 ![@mindinventory/React Native SpeedProgressView Version](https://flat.badgen.net/npm/v/@mindinventory/react-native-speed-view)
 ![@mindinventory/React Native SpeedProgressView Top Language](https://img.shields.io/github/languages/top/Mindinventory/react-native-speed-view)
 ![@mindinventory/React Native SpeedProgressView TypeScript](https://badgen.net/npm/types/tslib)
-![@mindinventory/React Native SpeedProgressView License](https://img.shields.io/github/license/Mindinventory/react-native-speed-view)
+![@mindinventory/React Native SpeedProgressView License](https://img.shields.io/github/license/mindinventory/react-native-speed-view)
 
 SpeedView, using this component we can show the speed progress with effective UI. you can also use it to show progress of any task with effective animated view.
 
